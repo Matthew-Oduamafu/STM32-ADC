@@ -21,7 +21,6 @@
  *   5. ISR: clears TCIF0, sets scan_complete = 1
  *   6. main() sees scan_complete, reads results, prints, triggers again
  *
- * Key fix vs previous version:
  *   After a single-mode sequence completes with DDS=0, the ADC
  *   internally stops issuing DMA requests (RM0090 §13.8.1).
  *   The DMA bit in ADC_CR2 must be toggled (cleared then set) before
